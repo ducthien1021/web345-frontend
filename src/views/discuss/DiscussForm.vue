@@ -25,10 +25,12 @@
 
 <script>
 import MISAForm from "../../components/base/form/MISAForm.vue";
+import MISAIcon from "../../components/base/form/MISAIcon.vue";
 export default {
     name: 'DiscussForm',
     props:{
-      MISAForm
+      MISAForm,
+      MISAIcon
     }
 }
 </script>
