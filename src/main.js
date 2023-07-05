@@ -7,8 +7,19 @@ import MISAResource from './helpers/resource'
 import MISAEnum from './helpers/enum'
 import axios from 'axios'
 
+
+import DiscussList from "./views/discuss/DiscussList";
+import DiscussPage from "./views/discuss/DiscussPage";
+import DiscussListItem from "./views/discuss/DiscussListItem";
+
+
 const app = createApp(App);
-app.component("m-combobox",MSCombobox);
+app.component("m-combobox", MSCombobox);
+
+
+app.component("DiscussList", DiscussList);
+app.component("DiscussPage", DiscussPage);
+app.component("DiscussListItem", DiscussListItem);
 
 app.config.globalProperties.$_emitter = emitter;
 app.config.globalProperties.$_MISAResource = MISAResource;
