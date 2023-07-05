@@ -1,9 +1,14 @@
 <template>
-
+    <div>
+        <discuss-list-item>
+            
+        </discuss-list-item>
     </div>
 </template>
 <script>
-
+import DiscussListItem from './DiscussListItem.vue';
+export default{
+  components: { DiscussListItem },
     data() {
         return {
             data: [

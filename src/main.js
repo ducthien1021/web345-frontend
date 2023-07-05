@@ -11,7 +11,8 @@ import axios from 'axios'
 import DiscussList from "./views/discuss/DiscussList";
 import DiscussPage from "./views/discuss/DiscussPage";
 import DiscussListItem from "./views/discuss/DiscussListItem";
-
+import MISATextField from "./components/base/textfield/MISATextField.vue"
+import MISAButton from "./components/base/button/MISAButton.vue"
 
 const app = createApp(App);
 app.component("m-combobox", MSCombobox);
@@ -20,6 +21,8 @@ app.component("m-combobox", MSCombobox);
 app.component("DiscussList", DiscussList);
 app.component("DiscussPage", DiscussPage);
 app.component("DiscussListItem", DiscussListItem);
+app.component("MISATextField", MISATextField);
+app.component("MISAButton", MISAButton);
 
 app.config.globalProperties.$_emitter = emitter;
 app.config.globalProperties.$_MISAResource = MISAResource;

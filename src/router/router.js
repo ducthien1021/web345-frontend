@@ -4,6 +4,7 @@ import ReportList from '@/views/report/ReportList.vue'
 import SettingIndex from '@/views/setting/SettingIndex.vue'
 import HomePage from '@/views/Index.vue'
 import DiscussPage from '@/views/discuss/DiscussPage.vue'
+import testT from '@/views/test/TestT.vue'
 
 const routers = [{
         path: "/customers",
@@ -29,6 +30,11 @@ const routers = [{
         path: "/discuss",
         name: "DiscussRouter",
         component: DiscussPage
+    },
+    {
+        path: "/test",
+        name: "te",
+        component: testT
     }
 ]
 
