@@ -1,11 +1,13 @@
 <template lang="">
     <div class="item">
-        <div class="item__icon"></div>
+        <div class="item__icon" :class="`icon--${type}`"></div>
         <div class="item__content">
-            <div class="content__title">Cần giúp đỡ về thuộc tính mắm tôm?</div>
+            <div class="content__title">{{ title }}</div>
             <div class="content__info">
-                <div class="content__author">Nguyễn Văn Mạnh</div>
-                <div class="content__response">Đã trả lời: 8</div>
+                <div class="content__author">{{ authorName }}</div>
+                <div class="content__response">
+                    Đã trả lời: {{ totalResponse }}
+                </div>
             </div>
         </div>
     </div>
@@ -13,7 +15,28 @@
 <script>
 export default {
     name: "DiscussListItem",
-    props: {},
+    props: {
+        type: {
+            type: String,
+            required: true,
+            default: "question",
+        },
+        title: {
+            type: String,
+            required: true,
+            default: "Tiêu đề",
+        },
+        authorName: {
+            type: String,
+            required: true,
+            default: "Tác giả",
+        },
+        totalResponse: {
+            type: Number,
+            required: true,
+            default: 0,
+        },
+    },
     data() {
         return {};
     },
@@ -26,15 +49,39 @@ export default {
 .item {
     width: 100%;
     height: 50px;
-    background-color: red;
+    display: flex;
+    column-gap: 12px;
+    align-items: center;
+    padding: 36px 0;
 }
 .item__icon {
+    min-width: 50px;
+    min-height: 50px;
+    background-size: contain;
+}
+
+.icon--question {
+    background-image: url(../../assets/icon/question-48.png);
+}
+
+.icon--discuss {
+    background-image: url(../../assets/icon/discuss-32.png);
+}
+
+.icon--share {
+    background-image: url(../../assets/icon/share-64.png);
 }
 .item__content {
 }
 .content__title {
+    font-size: 16px;
+    color: var(--color-primary);
+    font-weight: bold;
 }
 .content__info {
+    display: flex;
+    column-gap: 30px;
+    font-weight: bold;
 }
 .content__author {
 }

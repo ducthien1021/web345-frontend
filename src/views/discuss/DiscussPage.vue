@@ -1,6 +1,8 @@
 <template>
-    <div class="page">Thảo luận/ hỏi đáp</div>
-    <DiscussList />
+    <div class="page">
+        <div class="page__title">Thảo luận/ Hỏi đáp</div>
+        <DiscussList />
+    </div>
     <DisscusForm></DisscusForm>
 </template>
 <script>
@@ -60,6 +62,13 @@ export default {
 };
 </script>
 <style scoped>
+.page {
+    overflow: hidden;
+}
+.page__title {
+    font-size: 22px;
+    font-weight: bold;
+}
 .page__container {
     padding: 16px;
 }
