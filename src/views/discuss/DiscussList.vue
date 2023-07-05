@@ -1,12 +1,9 @@
 <template>
-    <div>
-        <DiscussListItem />
+
     </div>
 </template>
 <script>
-export default {
-    name: "DiscussList",
-    created() {},
+
     data() {
         return {
             data: [
