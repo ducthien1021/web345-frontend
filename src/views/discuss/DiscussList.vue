@@ -1,13 +1,19 @@
 <template>
     <div class="page">
         Thảo luận/ hỏi đáp
+        <DisscussForm>
+
+        </DisscussForm>
     </div>
     <DisscusForm></DisscusForm>
 </template>
 <script>
-// import DiscussDetail from './DiscussDetail.vue';
+import DiscussForm from './DiscussForm.vue'
 export default {
     name: "DiscussList",
+    props:{
+        DiscussForm
+    },
     created() {
         // fetch('data/threads.json')
         //     .then((response) => response.json())
