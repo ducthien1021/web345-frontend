@@ -12,6 +12,8 @@ import DiscussList from "./views/discuss/DiscussList";
 import DiscussPage from "./views/discuss/DiscussPage";
 import DiscussListItem from "./views/discuss/DiscussListItem";
 import DiscussResponseDetail from "./views/discuss/DiscussResponseDetail";
+import MISAButton from "./components/base/button/MISAButton";
+import MISATextField from "./components/base/textfield/MISATextfield";
 
 
 const app = createApp(App);
@@ -22,6 +24,8 @@ app.component("DiscussList", DiscussList);
 app.component("DiscussPage", DiscussPage);
 app.component("DiscussResponseDetail", DiscussResponseDetail);
 app.component("DiscussListItem", DiscussListItem);
+app.component("MISAButton", MISAButton);
+app.component("MISATextField", MISATextField);
 
 app.config.globalProperties.$_emitter = emitter;
 app.config.globalProperties.$_MISAResource = MISAResource;
