@@ -1,11 +1,11 @@
 <template>
-    <div>
-        <DiscussListItem />
-    </div>
+    <div class="page">Thảo luận/ hỏi đáp</div>
+    <DiscussList />
+    <DisscusForm></DisscusForm>
 </template>
 <script>
 export default {
-    name: "DiscussList",
+    name: "DiscussPage",
     created() {},
     data() {
         return {
