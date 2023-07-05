@@ -1,26 +1,25 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <TheHeader></TheHeader>
+    <TheSidebar></TheSidebar>
+    <TheMain></TheMain>
+    <MISAToast v-if="1==0"></MISAToast>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import TheHeader from "@/components/layout/TheHeader.vue"
+import TheSidebar from "@/components/layout/TheSidebar.vue"
+import TheMain from "@/components/layout/TheMain.vue"
+import MISAToast from "@/components/base/toast/MISAToast.vue"
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    TheHeader,TheSidebar,TheMain,MISAToast
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "./css/main.css";
 </style>
