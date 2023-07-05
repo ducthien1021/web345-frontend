@@ -1,109 +1,101 @@
 <template>
-    <div>
-        <discuss-list-item>
-            
-        </discuss-list-item>
+    <div class="discuss-list">
+        <div class="discuss-header"></div>
+        <div class="item-container">
+            <DiscussListItem
+                :type="question"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+            <DiscussListItem
+                type="discuss"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+            <DiscussListItem
+                type="share"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+            <DiscussListItem
+                type="question"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+
+            <DiscussListItem
+                type="question"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+            <DiscussListItem
+                type="question"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+            <DiscussListItem
+                type="question"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+            <DiscussListItem
+                type="question"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+            <DiscussListItem
+                type="question"
+                title="Cần giúp đỡ về thuộc tính flex?"
+                authorName="Nguyễn Văn Mạnh"
+                :totalResponse="130"
+            ></DiscussListItem>
+        </div>
+        <DiscussResponseDetail hidden />
     </div>
 </template>
 <script>
-import DiscussListItem from './DiscussListItem.vue';
-export default{
-  components: { DiscussListItem },
+export default {
+    name: "DiscussList",
+    props: {},
     data() {
-        return {
-            data: [
-                {
-                    ThreadId: 1,
-                    ThreadName: "Cần giúp đỡ về việc sử dụng thuộc tính flex?",
-                    ThreadType: 1,
-                    ThreadUser: "Nguyễn Văn Mạnh",
-                    AnswerNumber: 100,
-                    CreatedDate: "",
-                },
-                {
-                    ThreadId: 2,
-                    ThreadName:
-                        "Có bao nhiêu cách để thực hiện layout website?",
-                    ThreadType: 1,
-                    ThreadUser: "Đỗ Văn Cường",
-                    AnswerNumber: 8,
-                    CreatedDate: "",
-                },
-                {
-                    ThreadId: 3,
-                    ThreadName:
-                        "Thảo luận về hiệu năng sử dụng các component có binding 2 chiều với nhiều thông tin.",
-                    ThreadType: 2,
-                    ThreadUser: "Nguyễn Thị Nga",
-                    AnswerNumber: 12,
-                    CreatedDate: "",
-                },
-                {
-                    ThreadId: 4,
-                    ThreadName:
-                        "Chia sẻ việc lập trình đồng bộ trong Javascript, những điều cần lưu ý.",
-                    ThreadType: 3,
-                    ThreadUser: "Hoàng Ngọc Hân",
-                    AnswerNumber: 54,
-                    CreatedDate: "",
-                },
-                {
-                    ThreadId: 5,
-                    ThreadName:
-                        "Cho em hỏi về đồ án tốt nghiệp tại trường ĐH Bách Khoa.",
-                    ThreadType: 1,
-                    ThreadUser: "Trần Diễm Giang",
-                    AnswerNumber: 20,
-                    CreatedDate: "",
-                },
-            ],
-        };
+        return {};
     },
+    methods: {},
+    created() {},
+    computed: {},
 };
 </script>
 <style scoped>
-.page__container {
-    padding: 16px;
+.discuss-list {
+    background-color: #fff;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    padding-left: 22px;
 }
 
-.thread-list {
-    display: flex;
-    flex-direction: column;
-    margin-top: 10px;
+.discuss-header {
 }
 
-.thread__icon {
-    width: 40px;
-    height: 40px;
-    background-size: 40px;
-    border-radius: 50%;
-    flex: 0 0 40px;
-    background-repeat: no-repeat;
-    background-position: center;
+.discuss-list .item {
+    border-bottom: 2px solid #eeeff1;
 }
 
-.thread-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    column-gap: 10px;
-    padding: 10px 0;
+.discuss-list .item:last-child {
+    border-bottom: none;
 }
 
-.thread-item + .thread-item {
-    border-top: 1px solid var(--border-color-default);
-}
-
-.thread-item__title {
-    font-weight: 700;
-    color: var(--color-primary);
-}
-
-.thread-item__info {
-    display: flex;
-    align-items: center;
-    column-gap: 16px;
-    margin-top: 4px;
-    font-size: 12px;
+.item-container {
+    height: 100%;
+    overflow: auto;
+    padding-right: 22px;
 }
 </style>
